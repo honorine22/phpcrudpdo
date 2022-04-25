@@ -45,10 +45,10 @@
 
 <body>
     <h3>Edit your Product Information</h3>
-    <form method="POST" action="update.php">
-        <input type="hidden" name="user_ID" value="<?php echo $_GET["thisID"] ?>"><br>
-
+    <form method="POST" action="update.php" enctype='multipart/form-data'>
         <input type="text" name="name" placeholder="Product Name" value="<?php echo $_GET["prod_name"] ?>"><br>
+        <input type="hidden" name="user_ID" value="<?php echo $_GET["thisID"] ?>"><br>
+        <input type='file' name='files[]' multiple />
         <input type="text" name="money" placeholder="Product Money" value="<?php echo $_GET["money"] ?>" required><br>
         <input type="text" name="location" placeholder="Product Loation" value="<?php echo $_GET["location"] ?>" required><br>
         <input type="text" name="category" placeholder="Product Category" value="<?php echo $_GET["category"] ?>" required><br>
